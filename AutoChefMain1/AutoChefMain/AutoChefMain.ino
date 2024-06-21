@@ -4,13 +4,13 @@
 #include <EEPROM.h>
 #include <LiquidCrystal_I2C.h>
 #include "setup_pins.h"
-#include "functions.h"
+#include "functions.h"‎ 
 
 //button and lcd
 LiquidCrystal_I2C lcd(0x3E, 20, 4);
 
 //page
-enum MenuState {
+enum MenuState {‎ 
   WELCOME,
   MODE_SELECTION,
   MANUAL_MENU1,
@@ -241,7 +241,7 @@ void handleButtonPress(int option, MenuState nextState) {
     currentState = nextState;
     delay(200); // Debounce delay
   } else if (buttonState == HIGH && buttonPressed[option - 1]) {
-    buttonPressed[option - 1] = false;
+    buttonPressed[option - 1] = ‎ false;
   }
 }
 
@@ -521,7 +521,7 @@ void displayRow(int row) {
 
 void resetRow(int row) {
   for (int i = 0; i < colCount; i++) {
-    userInput[row][i] = 0;
+    userInput[row][i] = 0;;
     timestamps[row][i] = 0;//
   }
 }
@@ -533,7 +533,7 @@ void saveTimestampsToEEPROM(int currentRow) {
     address++;
   }
 }
-
+‎ 
 void loadTimestampsFromEEPROM() {
   int address = timestampEepromAddress;
   for (int i = 0; i < rowCount; i++) {
@@ -543,3 +543,4 @@ void loadTimestampsFromEEPROM() {
     }
   }
 }
+‎ ‎ ‎ 
