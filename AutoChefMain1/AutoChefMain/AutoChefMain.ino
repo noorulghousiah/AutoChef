@@ -1,10 +1,9 @@
-//1 june 2024
+/1 june 2024
 #include <Wire.h>
 #include <Arduino.h>
 #include <EEPROM.h>
 #include <LiquidCrystal_I2C.h>
-#include "setup_pins.h"
-#include "functions.h"‎ 
+#include "setup_pins.h" 
 
 //button and lcd
 LiquidCrystal_I2C lcd(0x3E, 20, 4);
